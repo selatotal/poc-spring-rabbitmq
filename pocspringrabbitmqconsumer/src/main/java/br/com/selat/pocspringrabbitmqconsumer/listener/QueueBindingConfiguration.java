@@ -23,8 +23,7 @@ public class QueueBindingConfiguration {
 
     @Bean
     public Binding binding(PocConsumerConfiguration configuration) {
-        return BindingBuilder
-                .bind(listenerQueue(configuration))
+        return BindingBuilder.bind(listenerQueue(configuration))
                 .to(centralExchange(configuration))
                 .with(configuration.getRoutingKey());
     }

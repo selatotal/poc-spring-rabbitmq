@@ -1,9 +1,8 @@
 package br.com.selat.pocspringrabbitmqproducer.contract.v1;
 
-import lombok.Data;
-
 import java.time.Instant;
 import java.util.UUID;
+import lombok.Data;
 
 @Data
 public class Message {

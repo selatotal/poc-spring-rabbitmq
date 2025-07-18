@@ -19,12 +19,14 @@ public class ProducerController {
     private final ProducerService producerService;
 
     @PostMapping("/outgoing")
-    public ResponseEntity<Message> sendOutgoing(@RequestBody ProducerMessageInput input) throws JsonProcessingException {
+    public ResponseEntity<Message> sendOutgoing(@RequestBody ProducerMessageInput input)
+            throws JsonProcessingException {
         return ResponseEntity.ok(producerService.sendOutgoing(input));
     }
 
     @PostMapping("/incoming")
-    public ResponseEntity<Message> sendIncoming(@RequestBody ProducerMessageInput input) throws JsonProcessingException {
+    public ResponseEntity<Message> sendIncoming(@RequestBody ProducerMessageInput input)
+            throws JsonProcessingException {
         return ResponseEntity.ok(producerService.sendIncoming(input));
     }
 }

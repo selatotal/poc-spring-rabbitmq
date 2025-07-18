@@ -2,6 +2,9 @@ package br.com.selat.pocspringrabbitmqconsumer.dynamiclistener;
 
 import br.com.selat.pocspringrabbitmqconsumer.config.PocConsumerConfiguration;
 import br.com.selat.pocspringrabbitmqconsumer.contract.exceptions.InternalErrorException;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.amqp.core.AmqpAdmin;
@@ -10,10 +13,6 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.stereotype.Service;
-
-import java.nio.charset.StandardCharsets;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 @Log4j2
@@ -63,5 +62,4 @@ public class DynamicListenerServiceImpl implements DynamicListenerService {
     private boolean isListening(String identifier) {
         return activeListeners.containsKey(identifier);
     }
-
 }

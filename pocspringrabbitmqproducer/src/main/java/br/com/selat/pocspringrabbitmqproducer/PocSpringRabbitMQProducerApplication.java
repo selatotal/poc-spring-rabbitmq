@@ -8,8 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableRabbit
 public class PocSpringRabbitMQProducerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PocSpringRabbitMQProducerApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(PocSpringRabbitMQProducerApplication.class, args);
+    }
 }
