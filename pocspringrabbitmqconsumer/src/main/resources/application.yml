@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: pocspringrabbitmqconsumer
+  rabbitmq:
+    username: myuser
+    password: mysecret
+    host: localhost
+    ssl:
+      enabled: false
+
+poc.consumer:
+  exchange: "device-exchange"
+  queue: "device-queue"
+  routingKey: "device.outgoing.*"
+  dynamicListenerIncomingKeyPrefix: "device.incoming."

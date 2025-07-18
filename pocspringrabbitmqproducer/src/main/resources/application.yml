@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: pocspringrabbitmqproducer
+  rabbitmq:
+    username: myuser
+    password: mysecret
+    host: localhost
+
+poc.producer:
+  exchange: "device-exchange"
+  routingKeyPrefix: "device.outgoing."
+  incomingQueuePrefix: "device.incoming."
