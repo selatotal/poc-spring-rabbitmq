@@ -7,6 +7,11 @@ spring:
     username: myuser
     password: mysecret
     host: localhost
+  docker:
+    compose:
+      lifecycle-management: start-and-stop
+      enabled: true
+      file: src/main/resources/docker-compose.yml
 
 poc.producer:
   exchange: "device-exchange"

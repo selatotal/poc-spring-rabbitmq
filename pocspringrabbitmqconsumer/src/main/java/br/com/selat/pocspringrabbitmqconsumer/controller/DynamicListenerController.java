@@ -15,13 +15,13 @@ public class DynamicListenerController {
 
     private final DynamicListenerService dynamicListenerService;
 
-    @PostMapping("/start/{identifier}")
+    @PostMapping("/{identifier}/start")
     public ResponseEntity<Object> startListening(@PathVariable("identifier") String identifier) {
         dynamicListenerService.startListener(identifier);
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/stop/{identifier}")
+    @PostMapping("/{identifier}/stop")
     public ResponseEntity<Object> stopListening(@PathVariable("identifier") String identifier) {
         dynamicListenerService.stopListener(identifier);
         return ResponseEntity.noContent().build();
